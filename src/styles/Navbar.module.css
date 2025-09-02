@@ -186,6 +186,7 @@
 }
 
 /* Content inside the search bar */
+
 .searchbar-bar {
   display: flex;
   justify-content: space-between;
@@ -235,6 +236,22 @@
 .searchbar-bar img:hover{
     background-color: #CACACB;
 }
+.searchbar-logo{
+    color: initial;
+    text-decoration: none;
+    /* background-color: transparent; */
+    /* background-color: green; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 34px;
+    overflow: hidden;
+}
+.searchbar-logo img{
+    width: 140px;
+    background-color: transparent;
+}
 .searchbar-bar button{
     border: none;
     outline: none;
@@ -248,7 +265,7 @@
 }
 
 .searchbar-terms h1{
-    color: rgb(112, 112, 114,0.7);
+    color: rgb(112, 112, 114,0.9);
     font-size: 14px;
     padding-left: 24px;
 }
@@ -351,7 +368,36 @@
     .navbar2-routes{
         display: flex;
     }
-    
+    .searchbar-logo{
+        display: flex;
+    }
+    .searchbar-bar div{
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+        justify-content: center;
+    }
+    .searchbar{
+        height: 80vh;
+    }
+
+    .searchbar-terms{
+        margin:0px 20%;
+        margin-top: 50px;
+        padding: 0;
+        /* background-color: red; */
+    }
+    .searchbar-terms h1{
+        padding: 0;
+    }
+    .searchbar-terms ul{
+       margin: 24px 0px;
+    }
+    .searchbar-terms a{
+        padding: 10px 16px;
+    }
 }
 
 @media screen and (min-width:1200px) {
@@ -360,5 +406,8 @@
     }
     .navbar2-searchbar{
         display: flex;
+    }
+    .searchbar{
+        height: 30vh;
     }
 }

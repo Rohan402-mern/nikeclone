@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import styles from '@/styles/Navbar.module.css'
 import Link from 'next/link'
@@ -15,6 +16,9 @@ const SearchBar = ({search,onCancel}:{search:boolean,onCancel:()=>void}) => {
   return (
     <div className={`${styles['searchbar']}  ${search ?styles.open2:'' }`}>
      <div className={styles['searchbar-bar']}>
+        <Link href={"/in"} className={styles['searchbar-logo']}>
+            <img src="icons/nike-logo.png" alt="nike-logo" />
+        </Link>
         <div>
             <img src="icons/search.png" alt="" />
             <input type="text" placeholder='Search' value={query} onChange={handleChange} />
