@@ -1,0 +1,50 @@
+.imagecard{
+    display: flex;
+    flex-direction: column;
+    /* background-color: pink; */
+}
+
+.imagecard-cont{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: auto;
+    /* background-color: red; */
+/* border: 4px solid pink; */
+}
+
+.imagecard-picture img{
+    width: 100%;
+    display: block;
+    margin: 0;
+    height: auto;
+    padding: 0;
+    border: none;
+}
+
+.imagecard-element{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.imagecard-element span{
+    font-size: 16px;
+    /* background-color: red; */
+    height:20px ;
+    font-weight: 550;
+    color: white;
+}
+.imagecard-element p{
+    font-size: 18px;
+    font-weight: 550;
+    color: white;
+}
