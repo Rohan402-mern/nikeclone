@@ -1,0 +1,25 @@
+.nikebtn{
+border: none;
+outline: none;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 15px;
+border-radius: 19px;
+}
+.nikebtn a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    color: inherit;
+}
+.nikebtn.nikebtndark{
+    background-color: rgb(17,17,17);
+    color: white;
+     border: 1px solid  rgb(112,112,114);
+}
+.nikebtn.nikebtnlight{
+    background-color: white;
+    color: rgb(17,17,17);
+    border: 1px solid  rgb(112,112,114);
+}

@@ -1,0 +1,236 @@
+
+.navbarmenu {
+  width: 319px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+  overflow:auto;
+  overflow-x: hidden;
+}
+.navbarmenu-wrapper{
+  display: flex;
+  width: 300%;
+  transform: translateX(0%);
+  transition: 0.3s ease;
+  /* overflow: hidden; */
+}
+.navbarmenu-wrapper.slidemenu{
+   transform: translateX(-33.3%);
+}
+.navbarmenu-wrapper.slidemenu2{
+   transform: translateX(-66.6%);
+}
+.navbarmenu-cont{
+  background-color: white;
+  /* background-color: aqua; */
+ width: 100%;
+}
+
+.navbarmenu-innercont,.navbarmenu-innercont{
+  width: 100%;
+}
+.navbarmenu.open {
+  transform: translateX(0);
+}
+
+.navbarmenu-cancel{
+  margin: 26px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+}
+.navbarmenu-cancel button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* background-color: pink; */
+
+}
+.navbarmenu-cancel img{
+  width: 24px;
+  height: 24px;
+  /* background-color: red; */
+}
+.navbarmenu-btn{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  margin: 26px;
+}
+.navbarmenu-btn button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px 0px;
+}
+.navbarmenu-btn img{
+  width: 24px;
+  height: 24px;
+}
+.navbarmenu-btn-span{
+  font-size: 24px;
+  font-weight: 500;
+  /* background-color: red; */
+  color: rgb(17, 17, 17);
+}
+.navbarmenu-btn-a{
+   font-size: 24px;
+  font-weight: 500;
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+}
+
+.navbarmenu-jordan{
+  margin: 44px 26px;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  justify-content: center;
+}
+.navbarmenu-jordan a{
+  text-decoration: none;
+color: inherit;
+display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.navbarmenu-jordan img{
+  width: 35px;
+  height: 35px;
+}
+.navbarmenu-jordan span{
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(17, 17, 17);
+
+}
+.navbarmenu-info{
+  font-size: 18px;
+  color: rgb(112, 112, 114);
+  font-weight: 550;
+  /* background-color: red; */
+  margin: 26px;
+  margin-top: 80px;
+  margin-right: 61px;
+}
+.navbarmenu-info span{
+  color: rgb(17, 17, 17);
+}
+
+.navbarmenu-nikebtn{
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 24px;
+/* background-color: red; */
+}
+
+.navbarmenu-logo-ul{
+  display: flex;
+  /* align-items: center; */
+  /* background-color: red; */
+  flex-direction: column;
+  margin: 24px;
+  margin-top: 70px;
+}
+.navbarmenu-logo-ul a{
+  font-size: 16px;
+  font-weight: 550;
+  /* background-color: aqua; */
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+.navbarmenu-logo-ul img{
+  width: 24px;
+  height: 24px;
+}
+
+/* Inner menu starts here  */
+
+.innermenu{
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  background-color: white;
+  transition: 0.3s ease-in;
+}
+
+.innermenu-head{
+  margin: 26px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.innermenu-head button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  /* background-color: pink; */
+}
+.innermenu-head-allbutton{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.innermenu-head-allbutton span{
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  font-weight: 550;
+}
+.innermenu-head img{
+  width: 24px;
+  height: 24px;
+  /* background-color: red; */
+}
+.innermenu h1{
+  font-size: 24px;
+  font-weight: 500;
+  /* background-color: red; */
+  color: rgb(17, 17, 17);
+  margin:0px 24px;
+  margin-top: 35px;
+}
+
+.innermenu-span{
+  color: rgb(112, 112, 114);
+  font-size: 16px;
+   text-decoration: none;
+   font-weight: 550;
+}
+
+.lastmenu{
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  background-color: pink;
+  transition: 0.3s ease-in;
+}
+
+.lastmenu-h1{
+  font-size: 24px;
+  font-weight: 500;
+  /* background-color: red; */
+  color: rgb(17, 17, 17);
+  margin:0px 24px;
+  margin-top: 35px;
+}
