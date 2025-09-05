@@ -3,6 +3,7 @@ import styles from "@/styles/HomeBanner.module.css"
 import NikeBtn from '../Reusable/NikeBtn'
 
 type BannerType={
+    bannerNo?:string,
     smallbanner:string;
     bigbanner:string;
     title?:string;
@@ -14,7 +15,7 @@ type BannerType={
     size:string;
 }
 
-const HomeBanner = ({bannerItem}:{ bannerItem: BannerType }) => {
+const HomeBanner = ({bannerItem}:{ bannerItem: BannerType}) => {
   return (
     <div className={styles['homebanner']}>
      <picture className={styles['homebanner-picture']}>

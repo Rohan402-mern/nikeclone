@@ -1,20 +1,58 @@
+"use client"
 import HomeBanner from '@/components/Banner/HomeBanner'
 import HomeBanner2 from '@/components/Banner/HomeBanner2'
 import HomeBanner3 from '@/components/Banner/HomeBanner3'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-const page = () => {
+type BannerType = {
+
+  bannerNo?: string;
+  smallbanner: string;
+  bigbanner: string;
+  title?: string;
+  type1: string;
+  type2?: string;
+  info: string;
+  btn: string;
+  btnhref: string;
+  size: string;
+}
+
+const Page = () => {
+  const [bannerItem, setBannerItem] = useState<BannerType | null>(null)
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      const res = await fetch('http://localhost:8080/nike/banner/123')
+      const data = await res.json()
+
+      const formattedData: BannerType = {
+        bannerNo: data._id,
+        smallbanner: data.smallbanner,
+        bigbanner: data.bigbanner,
+        title: data.title,
+        type1: data.type1,
+        type2: data.type2,
+        info: data.info,
+        btn: data.btn,
+        btnhref: data.btnhref,
+        size: data.size,
+      }
+
+      setBannerItem(formattedData)
+    }
+
+    fetchBanner()
+  }, [])
+  
+console.log(bannerItem)
   return (
     <div>
-      <HomeBanner 
-      bannerItem={{smallbanner:"/images/small-banner.png", bigbanner:"/images/big-banner.png",title:"Sabrina 3"
-        ,type1:"THE HOOPERS ",type2:"BLUEPRINT",info:"Build your game like the best in Sabrina's latest collection.",
-        btn:"Shop",btnhref:"in/sabrina",size:"(min-width: 960px)"}}
-       />
-       <HomeBanner3/>
-       <HomeBanner2/>
+      {bannerItem && <HomeBanner bannerItem={bannerItem} />}
+      <HomeBanner3 />
+      <HomeBanner2 />
     </div>
   )
 }
 
-export default page
+export default Page
