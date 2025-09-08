@@ -2,6 +2,9 @@
 import HomeBanner from '@/components/Banner/HomeBanner'
 import HomeBanner2 from '@/components/Banner/HomeBanner2'
 import HomeBanner3 from '@/components/Banner/HomeBanner3'
+import HomeSlider from '@/components/HomeSlider'
+import Marathon from '@/components/Marathon'
+import ShopBySport from '@/components/ShopBySport'
 import React, { useEffect, useState } from 'react'
 
 type BannerType = {
@@ -49,8 +52,10 @@ console.log(bannerItem)
   return (
     <div>
       {bannerItem && <HomeBanner bannerItem={bannerItem} />}
+      <ShopBySport/>
       <HomeBanner3 />
       <HomeBanner2 />
+      <Marathon/>
     </div>
   )
 }
