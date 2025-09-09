@@ -38,4 +38,4 @@ const ImageCard: React.FC<ImageCardProps> = ({ imageItems }) => {
   );
 };
 
-export default ImageCard;
+export default React.memo( ImageCard);

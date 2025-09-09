@@ -1,3 +1,4 @@
+"use client"
 import React, { ReactNode, useEffect } from 'react'
 import styles from "@/styles/HomeSlider.module.css"
 import Head from './Reusable/Head'

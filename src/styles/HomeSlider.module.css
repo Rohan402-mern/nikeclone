@@ -32,9 +32,9 @@
     gap: 10px;
 }
 .homeslider-controls img{
-    width: 24px;
+    width: 16px;
     background-color: #EAEAEA;
-    padding: 12px;
+    /* padding: 12px; */
     border-radius: 50%;
     cursor: pointer;
 }

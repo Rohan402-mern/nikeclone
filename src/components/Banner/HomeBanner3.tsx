@@ -1,7 +1,5 @@
-"use client";
-import React, { useEffect, useState } from 'react';
-import Head from '../Reusable/Head';
-import ImageCard from '../Reusable/ImageCard';
+import Head from '../Reusable/Head'
+import ImageCard from '../Reusable/ImageCard'
 
 type ImageItemType = {
   imageitemNo?: string;
@@ -13,35 +11,25 @@ type ImageItemType = {
   btnref: string;
   size: string;
   style: string;
-};
+}
 
-const HomeBanner3 = () => {
-  const [imageItems, setImageItems] = useState<ImageItemType[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+// Server-side fetch function
+async function getImageItems(): Promise<ImageItemType[]> {
+  const res = await fetch('http://localhost:8080/nike/all', {
+    // Cache for SSG behavior, you can customize this depending on your cache invalidation needs
+    cache: 'force-cache'
+  });
 
-  useEffect(() => {
-    const fetchImageItems = async () => {
-      try {
-        const res = await fetch('http://localhost:8080/nike/all'); // Adjust your backend endpoint
-        if (!res.ok) {
-          throw new Error("Failed to fetch image items");
-        }
-        const data = await res.json();
-        setImageItems(data);
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError("An unexpected error occurred");
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
+  if (!res.ok) {
+    throw new Error('Failed to fetch image items');
+  }
 
-    fetchImageItems();
-  }, []);
+  const data = await res.json();
+  return data;
+}
+
+export default async function HomeBanner3() {
+  const imageItems = await getImageItems();
 
   return (
     <div>
@@ -49,6 +37,4 @@ const HomeBanner3 = () => {
       <ImageCard imageItems={imageItems} />
     </div>
   );
-};
-
-export default HomeBanner3;
+}

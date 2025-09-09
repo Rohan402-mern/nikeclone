@@ -20,13 +20,16 @@ const HomeBanner = ({bannerItem}:{ bannerItem: BannerType}) => {
     <div className={styles['homebanner']}>
      <picture className={styles['homebanner-picture']}>
       <source media={bannerItem.size} srcSet={bannerItem.bigbanner} />
-      <img src={bannerItem.smallbanner} alt="banner_image" />
+      <img src={bannerItem.smallbanner} alt={bannerItem.title || "Nike_Banner"} loading="lazy"  />
     </picture>
     <div className={styles['homebanner-info']}>
-        <p>{bannerItem.title}</p>
-        <h1>{bannerItem.type1} <br /> {bannerItem.type2}</h1>
-        <p>{bannerItem.info}.</p>
-        <NikeBtn style='nikebtndark' href='in/sabrina' title={bannerItem.btn} />
+        {bannerItem.title && <p>{bannerItem.title}</p>}
+        <h1>
+          {bannerItem.type1}
+          {bannerItem.type2 && <><br />{bannerItem.type2}</>}
+        </h1>
+        {bannerItem.info && <p>{bannerItem.info}.</p>}
+        <NikeBtn style='nikebtndark' href={bannerItem.btnhref} title={bannerItem.btn} />
     </div>
     </div>
   )

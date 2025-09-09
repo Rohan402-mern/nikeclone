@@ -1,0 +1,57 @@
+.sportslider{
+    /* background-color: red; */
+    margin:50px 14px ;
+}
+
+.sportslider li{
+    list-style: none;
+    width: 294px;
+    display: flex;
+    flex-shrink: 0;
+    /* gap: 10px; */
+}
+
+.sportslider a{
+    display: flex;
+    flex-direction: column;
+  position:relative;
+}
+
+
+.sportslider img{
+    display: block;
+    width: 100%;
+
+}
+.sportslider-btn{
+    position: absolute;
+    top: 80%;
+}
+
+@media screen and (min-width:500px) {
+    .sportslider li{
+        width: 76%;
+    }
+     .sportslider-btn{
+        top: 90%;
+    }
+}
+
+@media screen and (min-width:960px) {
+   .sportslider li{
+        width: 455px;
+   }
+   .sportslider-btn{
+        top: 72%;
+    }
+    .sportslider{
+    /* background-color: red; */
+    margin:50px 28px ;
+}
+}
+
+@media screen and (min-width:1530px) {
+    .sportslider li{
+        width: 32%;
+    }
+}
