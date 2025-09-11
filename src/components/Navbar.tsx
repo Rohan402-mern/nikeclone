@@ -11,7 +11,7 @@ const TopBar = () => {
   return (
     <div className={styles['navbar1']}>
       <Link href={"/in/jordan"} className={styles['navbar1-logo']}>
-        <img src="icons/jordan-logo.png" alt="JordanLogo" />
+        <img src="/icons/jordan-logo.png" alt="JordanLogo" />
       </Link>
       <div className={styles['navbar1-ul']}>
         <ul>
@@ -36,7 +36,7 @@ const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu, handleMenu }: N
   return (
     <div className={styles['navbar2']}>
       <Link href={"/in"} className={styles['navbar2-logo']}>
-        <img src="icons/nike-logo.png" alt="nike-logo" />
+        <img src="/icons/nike-logo.png" alt="nike-logo" />
       </Link>
       <ul className={styles['navbar2-routes']}>
         <li onMouseEnter={() => onHoverMenu("new")} onMouseLeave={onLeaveMenu}>New & Featured</li>
@@ -58,12 +58,12 @@ const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu, handleMenu }: N
       </ul>
 
       <ul className={styles['navbar2-ul']}>
-        <img onClick={onSearchMenu} className={styles['navbar2-searchicon']} src="icons/search.png" alt="search_logo" />
+        <img onClick={onSearchMenu} className={styles['navbar2-searchicon']} src="/icons/search.png" alt="search_logo" />
         <Link className={styles['navbar2-acc']} href={"/account"}>
           <img src="/icons/user.png" alt="user_icon" />
         </Link>
         <search onClick={onSearchMenu} className={styles['navbar2-searchbar']}>
-          <img src="icons/search.png" alt="search_logo" />
+          <img src="/icons/search.png" alt="search_logo" />
           <span>Search</span>
         </search>
         <Link className={styles['navbar2-heart']} href={"/in/favoutarius"}>

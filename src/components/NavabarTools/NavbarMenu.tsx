@@ -169,20 +169,20 @@ const NavbarMenu = ({menu,handlemenuClose}:{menu:boolean,handlemenuClose:()=>voi
 
           <div className={styles['navbarmenu-cont']}>
       <div className={styles['navbarmenu-cancel']}>
-        <button onClick={handlemenuClose} ><img src="icons/cross.png" alt="" /></button>
+        <button onClick={handlemenuClose} ><img src="/icons/cross.png" alt="" /></button>
       </div>
 
       <div className={styles['navbarmenu-btn']}>
         {HamburgerItem.map((item,index)=>(
           <React.Fragment key={index}>
-             {item.next ? <button onClick={()=>handleClick(item.class as Categorytype)} ><span className={styles['navbarmenu-btn-span']}>{item.title}</span><img src="icons/right.png" alt="" /></button> : 
+             {item.next ? <button onClick={()=>handleClick(item.class as Categorytype)} ><span className={styles['navbarmenu-btn-span']}>{item.title}</span><img src="/icons/right.png" alt="" /></button> : 
             <button><Link className={styles['navbarmenu-btn-a']} href={"/in/launch"}>{item.title}</Link></button>}
           </React.Fragment>
       ))}
       </div>
 
       <button className={styles['navbarmenu-jordan']}>
-        <Link href={"in/jordan"}><img src="icons/jordan-logo.png" alt="" />
+        <Link href={"in/jordan"}><img src="/icons/jordan-logo.png" alt="" />
         <span>Jordan</span></Link>
       </button>
 
@@ -197,7 +197,7 @@ const NavbarMenu = ({menu,handlemenuClose}:{menu:boolean,handlemenuClose:()=>voi
 
       <ul className={styles['navbarmenu-logo-ul']}>
         {StoreItem.map((item,index)=>(
-          <Link key={index} href={`icons/${item.href}.png`}><img src={`icons/${item.src}.png`} alt="" />{item.title}</Link>
+          <Link key={index} href={`/in/${item.href}.png`}><img src={`/icons/${item.src}.png`} alt="" />{item.title}</Link>
         ))}
       </ul>
 
