@@ -1,0 +1,16 @@
+/* menbanner component */
+.btnbanner{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.btnbanner img{
+    width: 100%;
+}
+.btnbanner div{
+    /* background-color: red; */
+    position: absolute;
+    top: 80%;
+
+}
