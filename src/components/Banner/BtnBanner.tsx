@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "@/styles/Men.module.css"
 import NikeBtn from '../Reusable/NikeBtn'
-const MenBanner = () => {
+const BtnBanner = () => {
   return (
     <div className={styles['btnbanner']}>
       <picture className={styles['homebanner-picture']}>
@@ -15,4 +15,4 @@ const MenBanner = () => {
   )
 }
 
-export default MenBanner
+export default BtnBanner

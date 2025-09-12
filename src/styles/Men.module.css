@@ -4,13 +4,49 @@ position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
+width: 100%;
 }
+
 .btnbanner img{
     width: 100%;
 }
+
 .btnbanner div{
-    /* background-color: red; */
+    /* background-color: red; */  
     position: absolute;
     top: 80%;
+}
 
+@media screen and (min-width:600px) {
+    .btnbanner {
+        /* background-color: aqua; */
+           height: 43vw;
+    }
+
+    .btnbanner picture {
+        height: 100%;
+        width: 100%;
+        /* background-color: red; */
+    }
+    .btnbanner img{
+        object-fit: cover;
+        width: 100%;
+        object-position: center center;
+        height: 100%;
+    }
+    .btnbanner div{
+        top: 68%;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .btnbanner {
+        height: auto;
+    }
+    .btnbanner img{
+        width: 100%;
+    }
+    .btnbanner div{
+        top:75%;
+    }
 }
