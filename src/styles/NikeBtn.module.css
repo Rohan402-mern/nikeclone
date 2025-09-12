@@ -6,6 +6,7 @@ align-items: center;
 justify-content: center;
 padding: 10px 15px;
 border-radius: 19px;
+cursor: pointer;
 }
 .nikebtn a{
     text-decoration: none;
@@ -22,4 +23,8 @@ border-radius: 19px;
     background-color: white;
     color: rgb(17,17,17);
     border: 1px solid  rgb(112,112,114);
+}
+
+.nikebtn.nikebtndark:hover, .nikebtn.nikebtnlight:hover{
+    background-color: #CACACB;
 }

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../styles/Navbar.module.css'
 import Link from 'next/link'
 import NavbarDrop from './NavbarDrop'
@@ -7,12 +7,11 @@ import { NavbarItems } from '@/Jsfile/NavbarItems'
 import SearchBar from './NavabarTools/SearchBar'
 import NavbarMenu from './NavabarTools/NavbarMenu'
 
-// Top bar with store, help, join, sign in links
 const TopBar = () => {
   return (
     <div className={styles['navbar1']}>
       <Link href={"/in/jordan"} className={styles['navbar1-logo']}>
-        <img src="icons/jordan-logo.png" alt="JordanLogo" />
+        <img src="/icons/jordan-logo.png" alt="JordanLogo" />
       </Link>
       <div className={styles['navbar1-ul']}>
         <ul>
@@ -29,16 +28,15 @@ const TopBar = () => {
 type NavigationBarProps = {
   onHoverMenu: (menuType: keyof typeof NavbarItems) => void
   onLeaveMenu: () => void
-  onSearchMenu:()=>void
-  handleMenu:()=>void
+  onSearchMenu: () => void
+  handleMenu: () => void
 }
 
-// Middle navbar with main navigation links
-const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu,handleMenu }: NavigationBarProps) => {
+const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu, handleMenu }: NavigationBarProps) => {
   return (
     <div className={styles['navbar2']}>
       <Link href={"/in"} className={styles['navbar2-logo']}>
-        <img src="icons/nike-logo.png" alt="nike-logo" />
+        <img src="/icons/nike-logo.png" alt="nike-logo" />
       </Link>
       <ul className={styles['navbar2-routes']}>
         <li onMouseEnter={() => onHoverMenu("new")} onMouseLeave={onLeaveMenu}>New & Featured</li>
@@ -60,12 +58,12 @@ const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu,handleMenu }: Na
       </ul>
 
       <ul className={styles['navbar2-ul']}>
-        <img onClick={onSearchMenu} className={styles['navbar2-searchicon']} src="icons/search.png" alt="search_logo" />
+        <img onClick={onSearchMenu} className={styles['navbar2-searchicon']} src="/icons/search.png" alt="search_logo" />
         <Link className={styles['navbar2-acc']} href={"/account"}>
           <img src="/icons/user.png" alt="user_icon" />
         </Link>
         <search onClick={onSearchMenu} className={styles['navbar2-searchbar']}>
-          <img src="icons/search.png" alt="search_logo" />
+          <img src="/icons/search.png" alt="search_logo" />
           <span>Search</span>
         </search>
         <Link className={styles['navbar2-heart']} href={"/in/favoutarius"}>
@@ -82,7 +80,6 @@ const NavigationBar = ({ onHoverMenu, onLeaveMenu, onSearchMenu,handleMenu }: Na
   )
 }
 
-// Bottom banner for promotions
 const PromotionBanner = () => {
   return (
     <div className={styles['navbar3']}>
@@ -99,23 +96,25 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [SearchOpen, setSearchOpen] = useState(false)
   const [menu, setMenu] = useState(false)
+
   const handleMenuHover = (menuType: keyof typeof NavbarItems) => {
     setActiveMenu(menuType)
     setDropdownOpen(true)
   }
- const handleMenu=()=> {
+
+  const handleMenu = () => {
     setMenu(true)
   }
-  const handleMenuclose=()=> {
+  const handleMenuclose = () => {
     setMenu(false)
   }
-  const handleDrophover=()=> {
+  const handleDrophover = () => {
     setDropdownOpen(true)
   }
-  const handleSearch=()=> {
+  const handleSearch = () => {
     setSearchOpen(true)
   }
-  const handleSearchClose=()=> {
+  const handleSearchClose = () => {
     setSearchOpen(false)
   }
 
@@ -124,33 +123,32 @@ const Navbar = () => {
   }
 
   useEffect(() => {
-  if (SearchOpen || menu) {
-    document.body.style.overflow = 'hidden'; 
-  } else {
-    document.body.style.overflow = 'auto'; 
-  }
-}, [SearchOpen,menu]);
+    if (SearchOpen || menu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [SearchOpen, menu]);
 
   return (
     <div className={styles.navbar}>
       <TopBar />
       <div className={styles['navbar-wrapper']}>
-        <NavigationBar 
-        onHoverMenu={handleMenuHover} 
-        onLeaveMenu={handleMenuLeave}
-        onSearchMenu={handleSearch}
-        handleMenu={handleMenu}
-          />
-        { <NavbarDrop
-         type={activeMenu} 
-         handleDrophover={handleDrophover} 
-         onLeaveMenu={handleMenuLeave} 
-         open={dropdownOpen}
-         />
-         }
+        <NavigationBar
+          onHoverMenu={handleMenuHover}
+          onLeaveMenu={handleMenuLeave}
+          onSearchMenu={handleSearch}
+          handleMenu={handleMenu}
+        />
+        <NavbarDrop
+          type={activeMenu}
+          handleDrophover={handleDrophover}
+          onLeaveMenu={handleMenuLeave}
+          open={dropdownOpen}
+        />
       </div>
       <PromotionBanner />
-      <SearchBar search={SearchOpen} onCancel={handleSearchClose}/>
+      <SearchBar search={SearchOpen} onCancel={handleSearchClose} />
       <NavbarMenu menu={menu} handlemenuClose={handleMenuclose} />
     </div>
   )

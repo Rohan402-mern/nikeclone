@@ -1,0 +1,101 @@
+.shopbysport,.marathon{
+    /* background-color: aqua; */
+    margin: 50px 26px;
+}
+.marathon{
+    margin: 50px 0px;
+}
+.shopbysport li,.marathon li{
+    list-style: none;
+    width: 294px;
+    display: flex;
+    flex-shrink: 0;
+}
+.marathon li{
+    list-style: none;
+    width: 294px;
+    display: flex;
+    flex-shrink: 0;
+    /* background-color: red; */
+}
+.shopbysport a{
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+.shopbysport img,.marathon img{
+    width: 100%;
+    display: block;
+}
+.marathon a{
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+}
+.shopbysport span{
+    font-size: 20px;
+    font-weight: 550;
+    color: rgb(17,17,17);
+}
+.marathon-div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* background-color: aqua; */
+    padding: 0 !important;
+    
+}
+
+.marathon-div span{
+    font-size: 15px;
+    font-weight: 550;
+    color: rgb(112,112,114);
+}
+.marathon-div p{
+    font-size: 17px;
+    font-weight: 550;
+    color: rgb(17,17,17);
+}
+
+@media screen and (min-width:500px) {
+    .shopbysport li,.marathon li{
+        width: 76%;
+    }
+
+}
+
+@media screen and (min-width:960px) {
+    .shopbysport li, .marathon li{
+        width: 298px;
+    }
+    .shopbysport{
+        margin: 50px 52px;
+    }
+    .marathon{
+        margin: 50px 0;
+       
+    }
+    .shopbysport a{
+        gap: 30px;
+    }
+    .marathon a{
+        gap: 15px;
+    }
+    .marathon-div{
+        padding: 0 !important;
+    }
+
+}
+
+@media screen and (min-width:1120px) {
+    .shopbysport li, .marathon li{
+        width: 33%;
+    }
+    .marathon-div{
+        padding: 0;
+    }
+}

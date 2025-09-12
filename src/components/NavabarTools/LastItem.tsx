@@ -20,7 +20,7 @@ const LastItem = ({category, subcategory, handleBack,handleBack2, setShowInnerMe
 
       <div className={styles['innermenu-head']}>
         <button onClick={handleBack2} className={styles['innermenu-head-allbutton']} >
-            <img src="icons/left.png" alt="" />
+            <img src="/icons/left.png" alt="" />
             <span>{TitleItem[category as keyof typeof TitleItem]}</span>
         </button>
         <button onClick={()=>{handlemenuClose(); setShowInnerMenu(false);handleBack2(); handleBack() }} ><img src="icons/cross.png" alt="" /></button>

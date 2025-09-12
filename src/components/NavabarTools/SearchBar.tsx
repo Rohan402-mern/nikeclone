@@ -17,12 +17,12 @@ const SearchBar = ({search,onCancel}:{search:boolean,onCancel:()=>void}) => {
     <div className={`${styles['searchbar']}  ${search ?styles.open2:'' }`}>
      <div className={styles['searchbar-bar']}>
         <Link href={"/in"} className={styles['searchbar-logo']}>
-            <img src="icons/nike-logo.png" alt="nike-logo" />
+            <img src="/icons/nike-logo.png" alt="nike-logo" />
         </Link>
         <div>
-            <img src="icons/search.png" alt="" />
+            <img src="/icons/search.png" alt="" />
             <input type="text" placeholder='Search' value={query} onChange={handleChange} />
-           {query !== ""?  <img className={styles['cross-icon']} onClick={handleClear} src="icons/cross.png" alt="" />:""}
+           {query !== ""?  <img className={styles['cross-icon']} onClick={handleClear} src="/icons/cross.png" alt="" />:""}
         </div>
         <button onClick={onCancel}>Cancel</button>
       </div>

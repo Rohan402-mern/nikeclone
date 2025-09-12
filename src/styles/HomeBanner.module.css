@@ -1,0 +1,64 @@
+.homebanner{
+/* background-color: aqua;  */
+background-color: white;
+}
+
+.homebanner-picture img{
+    width: 100%;
+}
+
+.homebanner-info{
+    /* background-color: red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    /* text-align: center; */
+    padding: 30px 24px;
+    gap: 20px;
+}
+.homebanner-info p{
+    color: rgb(17,17,17);
+    font-weight: 550;
+}
+.homebanner-info h1{
+     font-size: 28px;
+    /* background-color: aqua; */
+    /* width: 75%; */
+    font-weight: 1000;
+    line-height: 1;
+    color: rgb(17,17,17);
+}
+
+/* head section */
+
+.head{
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(17,17,17);
+    margin: 24px;
+    /* background-color: red; */
+}
+
+/* responsiveness */
+@media screen and (min-width:600px) {
+    .homebanner-info{
+        padding: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .homebanner-info h1{
+        font-size: 54px;
+    }
+    .head{
+         margin: 24px 48px;
+    }
+    
+}

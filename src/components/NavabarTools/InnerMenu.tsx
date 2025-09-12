@@ -319,7 +319,7 @@ const InnerMenu = ({category,setSubCategory, handleClick2, handleBack,setShowInn
     <div className={styles['innermenu']}>
       <div className={styles['innermenu-head']}>
         <button onClick={handleBack} className={styles['innermenu-head-allbutton']} >
-            <img src="icons/left.png" alt="" />
+            <img src="/icons/left.png" alt="" />
             <span>All</span>
         </button>
         <button onClick={()=>{handlemenuClose(); setShowInnerMenu(false)}} ><img src="icons/cross.png" alt="" /></button>

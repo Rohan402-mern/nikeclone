@@ -58,7 +58,11 @@
         "New Arrivals",
         "Bestsellers",
         "Shop All Sale",
-        "Shoes",
+      ],
+    },
+    {
+      title:"Shoes",
+      items:[
         "All Shoes",
         "Lifestyle",
         "Jordan",
@@ -69,7 +73,11 @@
         "Skateboarding",
         "Sandals and Slides",
         "Nike By You",
-        "Clothing",
+      ]
+    },
+    {
+      title:"Clothing",
+      items:[
         "All Clothing",
         "Tops and T-Shirts",
         "Shorts",
@@ -78,7 +86,7 @@
         "Jackets and Gilets",
         "Jerseys and Kits",
         "Jordan",
-      ],
+      ]
     },
     {
       title: "Shop By Sport",
@@ -111,7 +119,11 @@
         "New Arrivals",
         "Bestsellers",
         "Shop All Sale",
-        "Shoes",
+      ],
+    },
+    {
+      title:"Shoes",
+      items:[
         "All Shoes",
         "Lifestyle",
         "Jordan",
@@ -121,7 +133,11 @@
         "Basketball",
         "Sandals and Slides",
         "Nike By You",
-        "Clothing",
+      ]
+    },
+    {
+      title:"Clothing",
+      items:[
         "All Clothing",
         "Performance Essentials",
         "Tops and T-Shirts",
